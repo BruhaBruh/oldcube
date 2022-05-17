@@ -3,8 +3,14 @@
     class="grid min-h-screen"
     style="grid-template-rows: max-content 1fr max-content"
   >
-    <Header />
+    <UIHeader />
     <slot />
-    <Footer />
+    <UIFooter />
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  titleTemplate: "%s - OLDCUBE",
+});
+</script>

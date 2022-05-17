@@ -1,5 +1,5 @@
 <template>
-  <Container>
+  <UIContainer>
     <div>wiki</div>
-  </Container>
+  </UIContainer>
 </template>

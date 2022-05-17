@@ -3,9 +3,9 @@
     class="px-1 h-full flex items-center border-b-2"
     :class="computedClass"
   >
-    <Typography variant="h4">
+    <UITypography variant="h4">
       <slot />
-    </Typography>
+    </UITypography>
   </NuxtLink>
 </template>
 

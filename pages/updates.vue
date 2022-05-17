@@ -1,5 +1,5 @@
 <template>
-  <Container>
+  <UIContainer>
     <div>updates</div>
-  </Container>
+  </UIContainer>
 </template>

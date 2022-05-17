@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     },
   },
   build: {
+    transpile: ["@heroicons/vue"],
     postcss: {
       postcssOptions: {
         plugins: {

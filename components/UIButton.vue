@@ -3,9 +3,9 @@
     class="h-10 rounded-sm focus:ring focus:ring-opacity-50 flex items-center justify-center px-3"
     :class="computedClass"
   >
-    <Typography variant="btn">
+    <UITypography variant="btn">
       <slot>Кнопка</slot>
-    </Typography>
+    </UITypography>
   </button>
 </template>
 

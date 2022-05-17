@@ -3,38 +3,50 @@
     class="bg-gray-100 bg-opacity-50 backdrop-blur grid-container fixed top-0 z-10 w-full"
     :style="{ height: `${height}px` }"
   >
-    <div class="col-span-2 flex items-center">
+    <div class="sm:col-span-2 lg:col-span-1 xl:col-span-3 flex items-center">
       <NuxtLink to="/" class="flex items-center space-x-2">
-        <Logo class="h-10 w-10" />
-        <Typography variant="h3">OLDCUBE</Typography>
+        <UILogo class="h-10 w-10" />
+        <UITypography variant="h3" class="hidden sm:block">
+          OLDCUBE
+        </UITypography>
       </NuxtLink>
     </div>
-    <nav class="col-span-8 flex items-stretch justify-center">
+    <nav
+      class="lg:col-span-2 xl:col-span-6 hidden lg:flex items-stretch justify-center"
+    >
       <ul class="flex space-x-4 items-stretch justify-center">
         <li>
-          <HeaderLink to="/news" :active="route.path === '/news'">
+          <UIHeaderLink to="/news" :active="route.path === '/news'">
             Новости
-          </HeaderLink>
+          </UIHeaderLink>
         </li>
         <li>
-          <HeaderLink to="/wiki" :active="route.path === '/wiki'">
+          <UIHeaderLink to="/wiki" :active="route.path === '/wiki'">
             Вики
-          </HeaderLink>
+          </UIHeaderLink>
         </li>
         <li>
-          <HeaderLink to="/updates" :active="route.path === '/updates'">
+          <UIHeaderLink to="/updates" :active="route.path === '/updates'">
             Обновления
-          </HeaderLink>
+          </UIHeaderLink>
         </li>
       </ul>
     </nav>
-    <div class="col-span-2 flex items-center justify-end">
-      <Button color="primary">Войти</Button>
+    <div
+      class="sm:col-span-2 lg:col-span-1 xl:col-span-3 flex items-center justify-end"
+    >
+      <button
+        class="flex lg:hidden items-center justify-center text-gray-900 h-10 w-10"
+      >
+        <ChevronDownIcon class="w-6 h-6 text-current" />
+      </button>
+      <UIButton color="primary" class="hidden lg:flex">Войти</UIButton>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
+import { ChevronDownIcon } from "@heroicons/vue/outline";
 const route = useRoute();
 
 //#region Header height on scroll
