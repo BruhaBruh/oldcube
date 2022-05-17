@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev -o",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.3",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {}
+}

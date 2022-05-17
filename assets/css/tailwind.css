@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply font-sans bg-gray-50 text-gray-900 min-h-screen scroll-smooth;
+}
+
+*,
+*:after,
+*:before {
+  @apply box-border transition ease-in;
+  outline: none;
+}
+
+*:focus,
+*:after:focus,
+*:before:focus {
+  @apply ring ring-opacity-25 ring-primary-400;
+  outline: none;
+}
+
+.grid-container {
+  @apply grid px-4 gap-8 grid-cols-12;
+}
