@@ -7,14 +7,11 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   presets: [],
-  darkMode: "class", // or 'class'
+  darkMode: "class",
   theme: {
     screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
+      md: "744px",
+      lg: "1440px",
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -24,6 +21,8 @@ module.exports = {
       white: colors.white,
       gray: colors.zinc,
       primary: colors.red,
+      discord: "#6366F1",
+      twitch: "#8B5CF6",
     }),
     columns: {
       auto: "auto",
@@ -221,7 +220,14 @@ module.exports = {
       150: "1.5",
       200: "2",
     },
-    container: {},
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        md: "1.5rem",
+        lg: "6rem",
+      },
+    },
     content: {
       none: "none",
     },
@@ -338,24 +344,6 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      jost: [
-        "Jost",
-        "Inter",
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
       sans: [
         "Inter",
         "ui-sans-serif",

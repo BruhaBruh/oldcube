@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply font-sans bg-gray-50 text-gray-900 min-h-screen scroll-smooth;
+  @apply font-sans bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50 min-h-screen scroll-smooth;
 }
 
 *,
@@ -17,10 +17,37 @@ body {
 *:focus,
 *:after:focus,
 *:before:focus {
-  @apply ring ring-opacity-25 ring-primary-400;
+  @apply ring ring-opacity-25 ring-primary-500;
   outline: none;
 }
 
-.grid-container {
-  @apply grid px-4 gap-8 grid-cols-2 sm:grid-cols-4 xl:grid-cols-12;
+::selection {
+  @apply bg-primary-300;
+}
+
+.secondary-selection::selection {
+  @apply bg-gray-500;
+}
+
+.dark .secondary-selection::selection {
+  @apply bg-gray-400;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+
+@media screen and (min-width: 744px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.5rem;
+  }
 }

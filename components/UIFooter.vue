@@ -1,12 +1,18 @@
 <template>
-  <footer class="grid-container bg-gray-900 h-24 mt-auto">
-    <UITypography
-      variant="h6"
-      class="col-span-full flex flex-col sm:flex-row items-start sm:items-center justify-center text-gray-50"
-    >
-      <NuxtLink to="/" class="text-primary-600 hover:underline"
-        >© OLDCUBE 2022</NuxtLink
-      ><span class="hidden sm:inline"> — </span>Все права защищены
-    </UITypography>
+  <footer
+    class="bg-gray-800 text-gray-50 flex items-stretch justify-center py-5"
+  >
+    <div class="container">
+      <NuxtLink to="/" class="col-span-2 text-primary-600 hover:underline">
+        <UITypography variant="b2" tag="span">© OLDCUBE 2022</UITypography>
+      </NuxtLink>
+
+      <UITypography
+        variant="b2"
+        tag="p"
+        class="col-span-2 md:col-start-5 md:col-span-4 lg:col-start-9 mt-2 md:mt-0 text-gray-400 flex md:justify-end"
+        >Спасибо Plasmo RP за вдохновение</UITypography
+      >
+    </div>
   </footer>
 </template>

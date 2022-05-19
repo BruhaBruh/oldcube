@@ -1,5 +1,5 @@
 <template>
-  <img :width="size" :height="size" src="/img/logo.png" alt="oldcube logo" />
+  <img :width="size" :height="size" src="/img/logo.png" alt="" />
 </template>
 
 <script setup lang="ts">
