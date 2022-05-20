@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-gray-800 text-gray-50 flex items-stretch justify-center py-5"
+    class="bg-gray-800 text-gray-50 flex items-stretch justify-center py-5 mt-auto"
   >
     <div class="container">
       <NuxtLink to="/" class="col-span-2 text-primary-600 hover:underline">

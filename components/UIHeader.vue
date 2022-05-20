@@ -29,12 +29,14 @@
       <div
         class="flex items-center justify-end md:col-start-8 lg:col-start-11 lg:col-span-2"
       >
-        <UIButton class="hidden lg:flex" variant="solid" color="primary"
-          >Авторизация</UIButton
+        <UILink
+          to="/auth"
+          class="hidden lg:flex"
+          variant="solid"
+          color="primary"
+          >Авторизация</UILink
         >
-        <button class="h-10 w-10 flex items-center justify-center lg:hidden">
-          <UIIcon icon="menu" class="fill-current" />
-        </button>
+        <UIIconButton class="lg:hidden" icon="menu" />
       </div>
     </div>
   </header>

@@ -27,8 +27,12 @@
               <UIButton variant="solid" color="secondary">
                 Купить проходку
               </UIButton>
-              <UIButton variant="text" color="secondary" class="mt-1 md:mt-0"
-                >О сервере</UIButton
+              <UILink
+                to="#features"
+                variant="text"
+                color="secondary"
+                class="mt-1 md:mt-0 md:ml-4"
+                >О сервере</UILink
               >
             </div>
             <UITypography variant="b2" tag="p" class="text-center mt-2"
@@ -38,7 +42,9 @@
         </section>
       </div>
     </div>
-    <div class="container py-16 gap-y-8">
+    <!-- #endregion -->
+    <!-- #region Features -->
+    <div id="features" class="container py-16 gap-y-8">
       <UIFeatureCard
         class="col-span-2 md:col-span-4 lg:col-span-3"
         label="Валюта"
