@@ -38,6 +38,7 @@
         >
 
         <UIIconButton
+          id="drawer-btn"
           class="lg:hidden"
           icon="menu"
           @click="uiStore.toggleMenu"
