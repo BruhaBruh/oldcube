@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50 h-16 flex items-stretch justify-center z-10 fixed top-0 left-0 w-full"
+    class="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50 h-16 flex items-stretch justify-center z-10 fixed top-0 left-0 w-full shadow-lg"
   >
     <div class="container">
       <p class="flex items-center md:col-span-2">
@@ -36,8 +36,19 @@
           color="primary"
           >Авторизация</UILink
         >
-        <UIIconButton class="lg:hidden" icon="menu" />
+
+        <UIIconButton
+          class="lg:hidden"
+          icon="menu"
+          @click="uiStore.toggleMenu"
+        />
       </div>
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import { useUIStore } from "~~/stores/ui";
+
+const uiStore = useUIStore();
+</script>

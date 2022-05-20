@@ -4,6 +4,7 @@
     style="grid-template-rows: max-content 1fr max-content"
   >
     <!-- <Html class="dark"></Html> -->
+    <UIDrawer />
     <UIHeader />
     <slot />
     <UIFooter />

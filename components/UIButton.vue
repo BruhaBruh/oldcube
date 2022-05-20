@@ -1,6 +1,6 @@
 <template>
   <button
-    class="h-10 rounded-lg px-4 flex items-center justify-center space-x-2 transition ease-in"
+    class="h-10 rounded-lg px-4 flex items-center justify-center space-x-2 transition ease-in cursor-pointer select-none"
     :class="computedClass"
   >
     <template v-if="props.icon">
@@ -26,7 +26,7 @@ const computedClass = computed(() => {
   switch (props.variant) {
     case "solid":
       return {
-        "disabled:text-gray-500 disabled:bg-gray-400 disabled:hover:bg-gray-400":
+        "disabled:text-gray-500 disabled:bg-gray-400 disabled:hover:bg-gray-400 disabled:cursor-not-allowed":
           true,
         "dark:disabled:text-gray-400 dark:disabled:bg-gray-500 dark:disabled:hover:bg-gray-500":
           true,
@@ -41,7 +41,8 @@ const computedClass = computed(() => {
     case "text":
       return {
         "border border-current": props.variant === "outline",
-        "disabled:text-gray-400 disabled:hover:text-gray-400": true,
+        "disabled:text-gray-400 disabled:hover:text-gray-400 disabled:cursor-not-allowed":
+          true,
         "dark:disabled:text-gray-500 dark:disabled:hover:text-gray-500": true,
         "text-primary-600 hover:text-primary-500 active:text-primary-700":
           props.color === "primary",

@@ -19,8 +19,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  modules: ["@pinia/nuxt"],
   build: {
-    transpile: ["@heroicons/vue"],
+    transpile: [],
     postcss: {
       postcssOptions: {
         plugins: {
