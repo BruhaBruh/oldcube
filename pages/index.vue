@@ -28,7 +28,8 @@
                 Купить проходку
               </UIButton>
               <UILink
-                to="#features"
+                :to="{ path: '/', hash: '#features' }"
+                @click="handleClickAboutServer"
                 variant="text"
                 color="secondary"
                 class="mt-1 md:mt-0 md:ml-4"
@@ -74,4 +75,10 @@
 import { useUIStore } from "~~/stores/ui";
 
 const uiStore = useUIStore();
+
+const handleClickAboutServer = () => {
+  const features = document.querySelector("#features") as HTMLElement;
+
+  window.scrollTo({ top: features.offsetTop, left: 0, behavior: "smooth" });
+};
 </script>
