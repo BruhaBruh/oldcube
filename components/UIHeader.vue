@@ -6,23 +6,19 @@
       <p class="flex items-center md:col-span-2">
         <NuxtLink to="/" class="flex items-center space-x-1">
           <UILogo class="w-10 h-10" />
-          <UITypography variant="h6" tag="span" class="hidden md:inline"
-            >OLDCUBE</UITypography
-          >
+          <UITypography variant="h6" tag="span" class="hidden md:inline">{{
+            config.project.name
+          }}</UITypography>
         </NuxtLink>
       </p>
 
       <nav class="hidden col-span-8 lg:flex items-stretch justify-center">
         <ul class="flex items-stretch space-x-4">
-          <li class="flex items-stretch">
-            <UIHeaderLink to="/">Главная</UIHeaderLink>
-          </li>
-          <li class="flex items-stretch">
-            <UIHeaderLink to="/wiki">Вики</UIHeaderLink>
-          </li>
-          <li class="flex items-stretch">
-            <UIHeaderLink to="/stats">Статистика</UIHeaderLink>
-          </li>
+          <template v-for="link in config.publicLinks">
+            <li class="flex items-stretch">
+              <UIHeaderLink :to="link.to">{{ link.label }}</UIHeaderLink>
+            </li>
+          </template>
         </ul>
       </nav>
 
@@ -49,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+import { config } from "~/stores/config";
 import { useUIStore } from "~~/stores/ui";
 
 const uiStore = useUIStore();

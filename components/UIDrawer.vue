@@ -4,11 +4,11 @@
     id="drawer"
     :class="computedClass"
   >
-    <UIDrawerCellLink class="lg:hidden" to="/">Главная</UIDrawerCellLink>
-    <UIDrawerCellLink class="lg:hidden" to="/wiki">Вики</UIDrawerCellLink>
-    <UIDrawerCellLink class="lg:hidden" to="/stats"
-      >Статистика</UIDrawerCellLink
-    >
+    <template v-for="link in config.publicLinks">
+      <UIDrawerCellLink class="lg:hidden" :to="link.to">{{
+        link.label
+      }}</UIDrawerCellLink>
+    </template>
     <UIDivider class="h-0 lg:hidden border-t w-full" />
     <UILink
       class="lg:hidden"
@@ -22,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import { config } from "~~/stores/config";
 import { useUIStore } from "~~/stores/ui";
 
 const uiStore = useUIStore();

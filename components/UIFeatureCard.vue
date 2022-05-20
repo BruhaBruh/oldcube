@@ -1,7 +1,5 @@
 <template>
-  <article
-    class="flex flex-col space-y-2 rounded-2xl shadow p-4 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50"
-  >
+  <UIPaper tag="article" class="flex flex-col space-y-2 p-4">
     <UITypography
       variant="h6"
       tag="div"
@@ -11,7 +9,7 @@
     <UITypography variant="h6" tag="p">
       <slot />
     </UITypography>
-  </article>
+  </UIPaper>
 </template>
 
 <script setup lang="ts">

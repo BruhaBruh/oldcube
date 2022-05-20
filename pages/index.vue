@@ -15,12 +15,12 @@
       <div class="container h-full">
         <section class="col-span-full flex items-center">
           <article class="w-full">
-            <UITypography variant="h1" tag="h1" class="text-center"
-              >OLDCUBE</UITypography
-            >
-            <UITypography variant="b1" tag="p" class="text-center mt-4"
-              >Приватный Minecraft сервер</UITypography
-            >
+            <UITypography variant="h1" tag="h1" class="text-center">{{
+              config.project.name
+            }}</UITypography>
+            <UITypography variant="b1" tag="p" class="text-center mt-4">{{
+              config.project.description
+            }}</UITypography>
             <div
               class="flex flex-col md:flex-row items-center justify-center dark mt-8"
             >
@@ -36,9 +36,9 @@
                 >О сервере</UILink
               >
             </div>
-            <UITypography variant="b2" tag="p" class="text-center mt-2"
-              >Java Edition 1.18.2</UITypography
-            >
+            <UITypography variant="b2" tag="p" class="text-center mt-2">{{
+              config.project.minecraftVersion
+            }}</UITypography>
           </article>
         </section>
       </div>
@@ -46,32 +46,20 @@
     <!-- #endregion -->
     <!-- #region Features -->
     <div id="features" class="container py-16 gap-y-8">
-      <UIFeatureCard
-        class="col-span-2 md:col-span-4 lg:col-span-3"
-        label="Валюта"
-        >Валютой сервера являются алмазы</UIFeatureCard
-      >
-      <UIFeatureCard
-        class="col-span-2 md:col-span-4 lg:col-span-3"
-        label="Города"
-        >Игроки возводят общество</UIFeatureCard
-      >
-      <UIFeatureCard
-        class="col-span-2 md:col-span-4 lg:col-span-3"
-        label="Общение"
-        >На сервере есть Plasmo Voice</UIFeatureCard
-      >
-      <UIFeatureCard
-        class="col-span-2 md:col-span-4 lg:col-span-3"
-        label="Скины"
-        >Библиотека скинов в личном кабинете</UIFeatureCard
-      >
+      <template v-for="feature in config.features">
+        <UIFeatureCard
+          class="col-span-2 md:col-span-4 lg:col-span-3"
+          :label="feature.chip"
+          >{{ feature.label }}</UIFeatureCard
+        >
+      </template>
     </div>
     <!-- #endregion -->
   </div>
 </template>
 
 <script setup lang="ts">
+import { config } from "~~/stores/config";
 import { useUIStore } from "~~/stores/ui";
 
 const uiStore = useUIStore();

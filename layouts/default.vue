@@ -22,7 +22,7 @@ useHead({
 const uiStore = useUIStore();
 
 const computedClass = computed(() => {
-  const classes = { "overflow-hidden": uiStore.menuIsOpen };
+  const classes = { "overflow-hidden": uiStore.menuIsOpen, dark: true };
 
   return Object.keys(classes)
     .filter((key) => classes[key])
