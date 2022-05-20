@@ -26,7 +26,7 @@ export default {
     { slots }: { slots: any }
   ) {
     const computedClass = computed<Record<string, boolean>>(() => ({
-      "transition ease-in": true,
+      "transition ease-in duration-75": true,
       "text-4xl font-bold": props.variant === "h1",
       "text-3xl font-bold": props.variant === "h2",
       "text-2xl font-bold": props.variant === "h3",
