@@ -3,6 +3,7 @@
     :to="to"
     class="w-full rounded-lg h-10 px-4 flex items-center transition ease-in"
     :class="computedClass"
+    style="min-height: 40px"
   >
     <UITypography variant="btn" tag="span"><slot /></UITypography>
   </NuxtLink>

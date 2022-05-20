@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="fixed top-0 right-0 max-w-xs w-full ml-4 z-5 h-screen overflow-y-auto bg-gray-100 dark:bg-gray-800 p-4 pt-20 transition ease-in shadow-lg select-none flex flex-col items-stretch space-y-4"
+    class="fixed top-0 right-0 max-w-xs w-full ml-4 z-5 h-screen overflow-y-auto bg-gray-100 dark:bg-gray-800 p-4 pt-20 transition ease-in shadow-lg select-none flex flex-col items-stretch space-y-4 overscroll-contain"
     :class="computedClass"
   >
     <UIDrawerCellLink class="lg:hidden" to="/">Главная</UIDrawerCellLink>

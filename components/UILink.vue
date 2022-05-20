@@ -2,6 +2,7 @@
   <NuxtLink
     class="h-10 rounded-lg px-4 flex items-center justify-center space-x-2 transition ease-in cursor-pointer"
     :class="computedClass"
+    style="min-height: 40px"
   >
     <template v-if="props.icon">
       <UIIcon :icon="props.icon" class="w-6 h-6 fill-current" />
